@@ -128,7 +128,7 @@ def extract_data(input_file, output_file):
         print('\nNessun dato estratto. Controlla che il file contenga righe nel formato atteso.')
 
 if __name__ == '__main__':
-    input_file = 'test.csv'
-    output_file = 'dati_estratti_test.csv'
+    #input_file = 'test.csv'
+    #output_file = 'dati_estratti_test.csv'
 
     extract_data(input_file, output_file)
