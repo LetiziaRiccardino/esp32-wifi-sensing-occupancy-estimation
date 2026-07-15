@@ -19,12 +19,24 @@ The project is organized around **4 core execution scripts** that cover the enti
 ### 1. Data Processing & Dataset Creation
 * **`extract_data.py`** *(or your specific filename)*: This script takes the raw, unstructured data stream extracted from the ESP32 nodes, cleans it, extracts relevant features, and aligns/orders the observations in a structured format to generate the final dataset (e.g., in `.csv` format) ready for training.
 
+**How to run:**
+  ```bash
+  python extract_data.py
+```
 ### 2. Machine Learning Classifiers
 Once the structured dataset is built, three different supervised learning algorithms are implemented and evaluated for the occupancy classification task:
 * **`knn_30s.py`**: classifies occupancy levels using the **k-Nearest Neighbors (k-NN)** algorithm, baseline distance-based classification.
+ ```bash
+  python knn_30s.py
+```
 * **`svm_30s.py`**: uses **Support Vector Machines (SVM)** with optimized kernels to find optimal decision boundaries for different crowd sizes.
+ ```bash
+   python svm_30s.py
+```
 * **`random_forest_30s.py`**: an ensemble method using **Random Forest (RF)** to provide robust predictions and evaluate feature importance.
-
+ ```bash
+   python random_forest_30s.py
+```
 ---
 
 ## 🛠️ Pipeline Workflow
